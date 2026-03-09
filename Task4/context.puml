@@ -1,0 +1,36 @@
+@startuml
+title C4. Диаграмма контекста
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+' Пользователи
+Person(client, "Клиент банка")
+Person(deposit_manager, "Менеджер бэк-офиса")
+Person(credit_manager, "Сотрудник кредитования")
+Person(callcenter_manager, "Сотрудник кол-центра")
+Person(partner_callcenter_manager, "Сотрудник партнерского кол-центра")
+
+System(site, "Сайт банка")
+System(internet_bank, "Интернет-банк")
+System_Ext(sms_system,  "Внешний телеком-сервис")
+System(abs_system, "АБС")
+System(callcenter_system, "Система кол-центра")
+System(partner_callcenter_system, "Система партнерского кол-центра")
+
+' Взаимодействие
+Rel(client, site, "Подает заявку на открытие депозита онлайн на сайте")
+Rel(client, internet_bank, "Подает заявку на открытие депозита онлайн через интернет-банк")
+Rel(site, abs_system, "Получает данные об актуальных ставках")
+Rel(site, callcenter_system, "Передает заявки на открытие депозита")
+Rel(internet_bank, abs_system, "Получает данные об актуальных ставках")
+Rel(internet_bank, sms_system, "Инициирует отправку SMS")
+Rel(sms_system, client, "Смс-уведомление с кодом подтверждения и об успешном открытии депозита")
+Rel(callcenter_manager, callcenter_system, "Обработывает заявку на открытие депозита при подаче через сайт")
+Rel(deposit_manager, abs_system, "Обрабатывает заявку на открытие депозита при подаче через интернет-банк и работает со ставками")
+Rel(credit_manager, abs_system, "Работает со ставками")
+
+Rel(callcenter_system, abs_system, "Получает обновления по ставкам")
+Rel(partner_callcenter_manager, partner_callcenter_system, "Работает в системе")
+Rel(partner_callcenter_system, abs_system, "Получает обновления по ставкам")
+
+@enduml

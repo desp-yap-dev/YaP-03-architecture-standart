@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.0">
+  <diagram name="Страница-1" id="wYIxi65RdkeSr3qymiQq">
+    <mxGraphModel dx="2253" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-1" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=24;" value="Q1" vertex="1">
+          <mxGeometry height="80" width="680" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-115" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="АБС" vertex="1">
+          <mxGeometry height="150" width="120" x="-120" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-116" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Сайт" vertex="1">
+          <mxGeometry height="150" width="120" x="-120" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-117" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Интернет-банк" vertex="1">
+          <mxGeometry height="150" width="120" x="-120" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-118" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Система КЦ" vertex="1">
+          <mxGeometry height="150" width="120" x="-120" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-119" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Получение актуальных ставок" vertex="1">
+          <mxGeometry height="50" width="120" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-120" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Передача заявок на открытие депозитов в систему КЦ" vertex="1">
+          <mxGeometry height="50" width="120" x="120" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-121" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Кэширование" vertex="1">
+          <mxGeometry height="50" width="160" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-122" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Реализация логики работы со ставками и заявками в АБС" vertex="1">
+          <mxGeometry height="50" width="680" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-123" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Развертывание брокера и топиков" vertex="1">
+          <mxGeometry height="50" width="90" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-124" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Интеграция с брокером (обработка заявок)" vertex="1">
+          <mxGeometry height="50" width="190" x="90" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-125" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Общие работы" vertex="1">
+          <mxGeometry height="150" width="120" x="-120" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-126" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Интеграция с брокером (обновление ставок)" vertex="1">
+          <mxGeometry height="50" width="160" x="680" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-127" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Получение актуальных ставок" vertex="1">
+          <mxGeometry height="50" width="120" x="840" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-128" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Передача заявок в АБС" vertex="1">
+          <mxGeometry height="50" width="160" x="280" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-130" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=24;" value="Q2" vertex="1">
+          <mxGeometry height="80" width="680" x="660" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-131" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Обновление файла через SFTP для партнерского КЦ" vertex="1">
+          <mxGeometry height="50" width="160" x="680" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-132" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Реализация смс-шлюза" vertex="1">
+          <mxGeometry height="50" width="160" x="680" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-133" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Интеграция с брокером сообщений (успешное открытие депозита)" vertex="1">
+          <mxGeometry height="50" width="200" x="480" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-134" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Реализация UI" vertex="1">
+          <mxGeometry height="50" width="240" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-135" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Реализация BFF" vertex="1">
+          <mxGeometry height="50" width="200" x="480" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-136" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Реализация микросервиса авторизации" vertex="1">
+          <mxGeometry height="50" width="240" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-137" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Реализация микросервиса депозитов" vertex="1">
+          <mxGeometry height="50" width="200" x="280" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-138" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Реализация микросервиса счетов" vertex="1">
+          <mxGeometry height="50" width="200" x="280" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="l0fL8-tdJu87l5KmIwKv-140" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Интеграция с смс-шлюзом" vertex="1">
+          <mxGeometry height="50" width="100" x="840" y="590" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
