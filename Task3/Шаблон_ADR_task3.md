@@ -27,12 +27,10 @@
 ### <a name="_qmphm5d6rvi3"></a>**Решение**
 Приведите диаграммы контекста и контейнеров в модели C4. 
 
-```markdown
-[Диаграмма контекста](https://github.com/desp-yap-dev/YaP-03-architecture-standart/blob/feature/standart/Task3/context.puml)
-[Диаграмма контекста.png](https://github.com/desp-yap-dev/YaP-03-architecture-standart/blob/feature/standart/Task3/context.png)
-[Диаграмма контейнеров](https://github.com/desp-yap-dev/YaP-03-architecture-standart/blob/feature/standart/Task3/containers.puml)
-[Диаграмма контейнеров.png](https://github.com/desp-yap-dev/YaP-03-architecture-standart/blob/feature/standart/Task3/containers.png)
-```
+[Диаграмма контекста](https://github.com/desp-yap-dev/YaP-03-architecture-standart/blob/feature/standart/Task3/context.puml)<br />
+[Диаграмма контекста.png](https://github.com/desp-yap-dev/YaP-03-architecture-standart/blob/feature/standart/Task3/context.png)<br />
+[Диаграмма контейнеров](https://github.com/desp-yap-dev/YaP-03-architecture-standart/blob/feature/standart/Task3/containers.puml)<br />
+[Диаграмма контейнеров.png](https://github.com/desp-yap-dev/YaP-03-architecture-standart/blob/feature/standart/Task3/containers.png)<br />
 
 **Основные компоненты: </b>**
 1. **Сайт**
