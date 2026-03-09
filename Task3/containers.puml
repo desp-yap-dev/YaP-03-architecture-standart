@@ -1,0 +1,66 @@
+@startuml
+title C4. Диаграмма контейнеров
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+' Пользователи
+Person(client, "Клиент банка")
+Person(deposit_manager, "Менеджер бэк-офиса")
+Person(credit_manager, "Сотрудник кредитования")
+Person(callcenter_manager, "Сотрудник кол-центра")
+
+Container(site, "Сайт банка", "React")
+System_Boundary(internet_bank, "Система интернет-банка") {
+    Container(ib_auth, "Микросервис, отвечающий за авторизацию", "ASP.NET")
+    Container(ib_deposits, "Микросервис, отвечающий за управление депозитами", "ASP.NET")
+    Container(ib_accounts, "Микросервис, отвечающий за управление счетами", "ASP.NET")
+    Container(ib_frontend, "Фронтенд", "React")
+    Container(ib_bff, "BFF", "ASP.NET")
+    Container(ib_queue, "Очередь сообщений", "Kafka")
+    Container(ib_accounts_db, "База данных счетов", "MS SQL")
+    Container(ib_deposits_db, "База данных депозитов", "MS SQL")
+}
+
+System_Boundary(abs, "АБС") {
+    Container(abs_client, "Дестопный клиент", "Delphi")
+    Container(abs_queue, "Очередь сообщений", "Kafka")
+    Container(abs_cache, "Кэш", "Redis")
+    Container(abs_db, "База данных", "Oracle")
+}
+
+Container(sms_gateway, "Смс-шлюз")
+Container_Ext(sms_system, "Внешний телеком-сервис")
+Container(callcenter_system, "Система кол-центра")
+
+' Взаимодействие
+Rel(client, site, "Подает заявку на открытие депозита онлайн на сайте")
+Rel(client, ib_frontend, "Подает заявку на открытие депозита онлайн через интернет-банк")
+
+Rel(ib_frontend, ib_bff, "Взаимодействует с BFF")
+Rel(ib_bff, ib_auth, "Авторизует пользователя")
+Rel(ib_bff, ib_deposits, "Управление депозитами")
+Rel(ib_bff, ib_accounts, "Управление счетами")
+Rel(ib_deposits, ib_deposits_db, "Управление депозитами")
+Rel(ib_accounts, ib_accounts_db, "Управление счетами")
+Rel(ib_bff, abs_queue, "Отправка заявок на открытие депозита")
+Rel(ib_bff, abs_cache, "Получение данных по ставкам депозитов")
+Rel(ib_bff, ib_queue, "Обработка сообщений об успешном открытии депозита")
+Rel(ib_bff, sms_gateway, "Смс-уведомление с кодом подтверждения и об успешном открытии депозита")
+
+Rel(credit_manager, abs_client, "Работает со ставками")
+Rel(deposit_manager, abs_client, "Работает со ставками и заявками")
+
+Rel(abs_client, abs_cache, "Справочные данные")
+Rel(abs_client, abs_db, "Получение и сохранение данных")
+Rel(abs_client, abs_queue, "Обработка полученных заявок")
+Rel(abs_client, ib_queue, "Отправка сообщений об успешном открытии депозита")
+
+Rel(callcenter_manager, callcenter_system, "Обрабатывает заявку на открытие депозита при подаче через сайт")
+Rel(callcenter_system, abs_queue, "Передача заявок в АБС менеджеру")
+
+Rel(sms_gateway, sms_system, "Смс-уведомление с кодом подтверждения и об успешном открытии депозита")
+
+Rel(site, callcenter_system, "Заявки на открытие депозита с сайта")
+Rel(site, abs_cache, "Получение актуальных данных по доступным депозитам")
+
+@enduml
